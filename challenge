@@ -1,0 +1,27 @@
+import random
+
+# Senarai nama binatang
+binatang = ["singa", "gajah", "kucing", "anjing", "tikus"]
+
+# Pilih perkataan secara rawak
+binatang_rawak = random.choice(binatang)
+
+# Meyusun huruf-huruf rawak dalam bentuk perkataan
+huruf_rawak = list(binatang_rawak)
+random.shuffle(huruf_rawak)
+
+# Bentuk perkataan rawak
+binatang_rawak2 = "".join(huruf_rawak)
+
+# Arahan permainan
+print("Selamat datang! Cuba teka nama binatang dari huruf-huruf yang tidak teratur:")
+print(binatang_rawak2)
+
+# Meminta tekaan pemain
+tekaan = input("Tekaan Anda: ").lower()
+
+# Memeriksa tekaan pemain
+if tekaan == binatang_rawak:
+    print("Tahniah! Anda telah meneka dengan betul. Nama binatang adalah", binatang_rawak)
+else:
+    print("Maaf, tekaan Anda salah. Jawapan yang betul ialah", binatang_rawak)
